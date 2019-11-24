@@ -5,7 +5,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
 import org.springframework.stereotype.Component
 
 @Component
-class ScopeDefinitionPostProcessor : BeanFactoryPostProcessor {
+class UseNewOneAnnotationBeanFactoryPostProcessor : BeanFactoryPostProcessor {
     override fun postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory) {
         println("Customization of bean factory ...")
         beanFactory.getBeanNamesForAnnotation(UseNewOne::class.java).forEach {
